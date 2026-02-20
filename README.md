@@ -2,9 +2,6 @@
 
 > Can a DQN agent learn tower defense strategies that transfer across map configurations it has never seen? This project explores where value-based reinforcement learning breaks down in sequential spatial-resource allocation problems.
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
-[![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20RL-red.svg)](https://pytorch.org)
-[![Pygame](https://img.shields.io/badge/Pygame-Game%20Engine-orange.svg)](https://pygame.org)
 
 ![Game Screenshot](assets/game_screenshot.png)
 
