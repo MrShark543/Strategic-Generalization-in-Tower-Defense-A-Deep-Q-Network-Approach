@@ -66,21 +66,21 @@ Training ran for 800 episodes across multiple maps. Four metrics tell the story:
 
 ### Reward Decline Despite Training
 
-![Accumulated Reward per Episode](assets/accumulated_reward.png)
+![Accumulated Reward per Episode](assets/Accumulated reward per episode.png)
 
 Rewards peaked in early episodes then declined steadily. The agent initially found reasonable strategies but couldn't sustain them as it encountered more map variation.
 
 ### Progressive Survival Collapse
 
-![Lives Remaining per Episode](assets/lives_remaining.png)
+![Lives Remaining per Episode](assets/lives remaining per episode.png)
 
 Survival dropped from full health in early episodes to near-zero by episode 400+. More training made the agent *worse* at staying alive.
 
 ### Q-Value Overestimation
 
-![Average Q-value per Episode](assets/avg_q_values.png)
+![Average Q-value per Episode](assets/Average Qvalue per episode.png)
 
-![Average Max Q-value per Episode](assets/max_q_values.png)
+![Average Max Q-value per Episode](assets/Average max Q value per episode.png)
 
 Q-values rose consistently throughout training while actual performance collapsed. The agent became increasingly *confident* in decisions that were getting worse — the classic DQN overestimation failure mode.
 
