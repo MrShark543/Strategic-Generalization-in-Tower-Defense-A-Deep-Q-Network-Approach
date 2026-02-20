@@ -24,7 +24,7 @@
 
 ## The Problem
 
-Tower defense requires an agent to make sequential resource allocation decisions on a spatial grid — where to place towers, when to upgrade, and when to save money — while enemies traverse predefined paths. The challenge intensifies when we ask: **can an agent trained on some maps generalize its strategy to maps it has never seen?**
+Tower defense requires an agent to make sequential resource allocation decisions on a spatial grid — where to place towers and when to save money — while enemies traverse predefined paths. The challenge intensifies when we ask: **can an agent trained on some maps generalize its strategy to maps it has never seen?**
 
 This involves a combinatorial action space (61 discrete actions), delayed reward signals (a bad placement only matters waves later), and spatial reasoning that must transfer across different map geometries.
 
@@ -96,14 +96,14 @@ Q-values rose consistently throughout training while actual performance collapse
 
 Despite not solving the generalization problem, this work produced concrete outcomes:
 
-- **A reusable tower defense RL environment** — fully functional game engine with multiple enemy types, tower upgrades, configurable maps, and a clean `step(action) -> (state, reward, done)` interface ready for any RL algorithm
+- **A reusable tower defense RL environment** — fully functional game engine with multiple enemy types,  configurable maps, and a clean `step(action) -> (state, reward, done)` interface ready for any RL algorithm
 - **Strategic position abstraction** — the close/medium/far categorization proved to be a sound design for map-agnostic action spaces, independent of the learning algorithm
 - **A robust state representation** — the 4-channel spatial grid + scalar vector provides sufficient information for strategic learning (the representation isn't the bottleneck)
 - **Clear diagnosis of failure modes** — Q-value overestimation, lack of temporal context, absence of curriculum structure, and catastrophic forgetting identified as distinct root causes
 
 ## Environment Details
 
-**Grid**: 20x15 cells | **Tower upgrades**: Up to 4 levels | **Training**: 800 episodes across multiple maps
+**Grid**: 20x15 cells | **Training**: 800 episodes across multiple maps
 
 | Enemy Type | Health | Speed | Reward |
 |---|---|---|---|
