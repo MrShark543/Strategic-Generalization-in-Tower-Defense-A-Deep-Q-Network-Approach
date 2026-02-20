@@ -78,8 +78,6 @@ Survival dropped from full health in early episodes to near-zero by episode 400+
 
 ### Q-Value Overestimation
 
-![Average Q-value per Episode](assets/Average_Qvalue_per_episode.png)
-
 ![Average Max Q-value per Episode](assets/Average_max_Q_value_per_episode.png)
 
 Q-values rose consistently throughout training while actual performance collapsed. The agent became increasingly *confident* in decisions that were getting worse — the classic DQN overestimation failure mode.
